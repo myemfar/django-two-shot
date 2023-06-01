@@ -24,7 +24,7 @@ def user_login(request):
     else:
         form = LoginForm()
     context = {
-        "form":form,
+        "form": form,
     }
     return render(request, "accounts/login.html", context)
 
@@ -32,6 +32,7 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect("login")
+
 
 def signup(request):
     if request.method == "POST":
@@ -54,6 +55,6 @@ def signup(request):
         form = SignUpForm()
         # return redirect("login")
     context = {
-        "form":form
+        "form": form
     }
     return render(request, "registration/signup.html", context)
