@@ -10,6 +10,7 @@ class ExpenseCategoryAdmin(admin.ModelAdmin):
         "owner",
     )
 
+
 @admin.register(Account)
 class AccountAdmin(admin.ModelAdmin):
     list_display = (
@@ -17,6 +18,7 @@ class AccountAdmin(admin.ModelAdmin):
         "number",
         "owner",
     )
+
 
 @admin.register(Receipt)
 class ReceiptAdmin(admin.ModelAdmin):
