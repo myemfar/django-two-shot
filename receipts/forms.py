@@ -1,5 +1,5 @@
 from django import forms
-from receipts.models import Receipt, ExpenseCategory
+from receipts.models import Receipt, ExpenseCategory, Account
 
 
 class ReceiptForm(forms.ModelForm):
@@ -20,4 +20,13 @@ class CategoryForm(forms.ModelForm):
         model = ExpenseCategory
         fields = [
             "name",
+        ]
+
+
+class AccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = [
+            "name",
+            "number",
         ]

@@ -31,6 +31,7 @@
         Logged in as {{ user.username }}
         <a href="{% url 'logout' %}">Logout</a>
         <a href="{% url 'create_category' %}">Create Category</a>
+        <a href="{% url 'create_account' %}">Create Account</a>
         {% else %}
         <a href="{% url 'signup' %}">Sign Up</a>
         <a href="{% url 'login' %}">Login</a>
