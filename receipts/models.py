@@ -49,10 +49,7 @@ class Receipt(models.Model):
     )
     account = models.ForeignKey(
         Account,
-        related_name="reciepts",
+        related_name="receipts",
         on_delete=models.CASCADE,
         null=True,
     )
-
-    def __str__(self):
-        return self.name
