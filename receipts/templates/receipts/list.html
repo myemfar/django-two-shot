@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+
 {% block title %}
-My Receipts
+    My Receipts
 {% endblock title %}
 {% block content %}
     <main>
@@ -18,14 +19,14 @@ My Receipts
             </thead>
             <tbody>
                 {% for receipt in receipt_list %}
-                <tr>
-                    <td>{{ receipt.vendor }}</td>
-                    <td>{{ receipt.total }}</td>
-                    <td>{{ receipt.tax }}</td>
-                    <td>{{ receipt.date|date:"m/d/y" }}</td>
-                    <td>{{ receipt.category }}</td>
-                    <td>{{ receipt.account }}</td>
-                </tr>
+                    <tr>
+                        <td>{{ receipt.vendor }}</td>
+                        <td>{{ receipt.total }}</td>
+                        <td>{{ receipt.tax }}</td>
+                        <td>{{ receipt.date|date:"m/d/y" }}</td>
+                        <td>{{ receipt.category }}</td>
+                        <td>{{ receipt.account }}</td>
+                    </tr>
                 {% endfor %}
             </tbody>
         </table>
